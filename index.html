@@ -14,6 +14,7 @@
       <div class="logo">AyT Consulting - Ömer M. Ayar</div>
       <div>
         <ul class="nav-links">
+          <li><a href="#focus" style="color: red">Current Focus</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
@@ -30,6 +31,7 @@
           <span></span>
         </div>
         <div class="menu-links">
+          <li><a href="#focus" onclick="toggleMenu()">Focus</a></li>
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
           <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
@@ -76,6 +78,39 @@
           />
         </div>
       </div>
+    </section>
+    <section id="focus">
+      <p class="section__text__p1">So let's talk about</p>
+      <h1 class="title">My current project</h1>
+
+      <div class="details-container">
+        <img src="./assets/github.png"
+             alt="project on github"
+             class="icon"
+             onclick="location.href='https://github.com/OeMA4/ayt-teamforge'"
+        />
+
+        <div>
+          <br>
+          <p>
+            This project aims to generate fair and balanced teams from a list of players with different skills and characteristics.
+            Using a user-friendly interface, users can enter the player information and the application uses this data to create balanced teams.
+            The user interface allows for easy interaction where users can enter the players and their skills.
+            Once entered, they are presented with a visual representation of the generated teams, allowing them to check the distribution of players and their allocation to teams.
+          </p>
+          <br>
+          <p>
+            The program takes into account various factors such as the strengths and weaknesses of individual players, their positions and possible synergies between team members.
+            It also offers the user the option to adjust or regenerate the teams if necessary to ensure that the teams remain fair and balanced.
+          </p>
+          <br>
+          <p>
+            How did I come up with this idea? There is a discussion with my friends every week about who needs to be in a team with whom to keep it "roughly" balanced, I want to save myself the discussions and let the algorithm do the work :)
+          </p>
+
+        </div>
+      </div>
+
     </section>
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
