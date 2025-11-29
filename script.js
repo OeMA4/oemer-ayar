@@ -1,4 +1,6 @@
-// Modern Portfolio JavaScript - 2025
+// ================================================
+// ÖMER AYAR - PORTFOLIO SCRIPTS
+// ================================================
 
 // Hamburger Menu Toggle
 function toggleMenu() {
@@ -8,49 +10,42 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
-// Dark Mode Toggle
-function initTheme() {
-  const savedTheme = localStorage.getItem("theme");
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-  if (savedTheme) {
-    document.documentElement.setAttribute("data-theme", savedTheme);
-  } else if (prefersDark) {
-    document.documentElement.setAttribute("data-theme", "dark");
-  }
-
-  updateThemeIcon();
-}
-
+// Theme Toggle
 function toggleTheme() {
-  const currentTheme = document.documentElement.getAttribute("data-theme");
+  const html = document.documentElement;
+  const currentTheme = html.getAttribute("data-theme");
   const newTheme = currentTheme === "dark" ? "light" : "dark";
 
-  document.documentElement.setAttribute("data-theme", newTheme);
+  html.setAttribute("data-theme", newTheme);
   localStorage.setItem("theme", newTheme);
   updateThemeIcon();
 }
 
 function updateThemeIcon() {
-  const themeToggle = document.querySelector(".theme-toggle");
-  if (!themeToggle) return;
-
+  const themeIcons = document.querySelectorAll(".theme-icon");
   const isDark = document.documentElement.getAttribute("data-theme") === "dark";
-  themeToggle.innerHTML = isDark ? "&#9728;" : "&#9790;"; // Sun or Moon
-  themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+
+  themeIcons.forEach(icon => {
+    icon.textContent = isDark ? "☀" : "☾";
+  });
 }
 
-// Navbar Scroll Effect
-function handleNavScroll() {
-  const nav = document.querySelector("nav");
-  if (window.scrollY > 50) {
-    nav.classList.add("scrolled");
-  } else {
-    nav.classList.remove("scrolled");
+function initTheme() {
+  const savedTheme = localStorage.getItem("theme");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  // Default to dark mode unless user explicitly chose light
+  if (savedTheme) {
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  } else if (!prefersDark) {
+    document.documentElement.setAttribute("data-theme", "light");
   }
+  // Dark mode is already set as default in HTML
+
+  updateThemeIcon();
 }
 
-// Intersection Observer for Fade-in Animations
+// Scroll Animations with Intersection Observer
 function initScrollAnimations() {
   const observerOptions = {
     root: null,
@@ -67,9 +62,9 @@ function initScrollAnimations() {
     });
   }, observerOptions);
 
-  // Add fade-in class to elements
+  // Elements to animate
   const animatedElements = document.querySelectorAll(
-    ".details-container, .text-container, .section-container, .contact-info-container"
+    ".tech-category, .project-card, .timeline-item, .contact-card, .about-content, .qualification-card"
   );
 
   animatedElements.forEach(el => {
@@ -78,12 +73,16 @@ function initScrollAnimations() {
   });
 }
 
-// Smooth scroll for anchor links
+// Smooth Scroll for Anchor Links
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
+    anchor.addEventListener("click", function(e) {
+      const href = this.getAttribute("href");
+      if (href === "#") return;
+
       e.preventDefault();
-      const target = document.querySelector(this.getAttribute("href"));
+      const target = document.querySelector(href);
+
       if (target) {
         target.scrollIntoView({
           behavior: "smooth",
@@ -102,18 +101,19 @@ function initSmoothScroll() {
   });
 }
 
-// Active navigation link highlighting
+// Active Navigation Link Highlighting
 function updateActiveNavLink() {
   const sections = document.querySelectorAll("section[id]");
-  const navLinks = document.querySelectorAll(".nav-links a");
+  const navLinks = document.querySelectorAll(".nav-links a, .menu-links a");
 
   let currentSection = "";
+  const scrollPosition = window.scrollY + 150;
 
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 150;
+    const sectionTop = section.offsetTop;
     const sectionHeight = section.offsetHeight;
 
-    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
       currentSection = section.getAttribute("id");
     }
   });
@@ -126,45 +126,77 @@ function updateActiveNavLink() {
   });
 }
 
-// Typing effect for title (optional enhancement)
+// Navbar Background on Scroll
+function handleNavScroll() {
+  const nav = document.querySelector("nav");
+  if (window.scrollY > 50) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+}
+
+// Close mobile menu on outside click
+function initMenuCloseOnOutsideClick() {
+  document.addEventListener("click", (e) => {
+    const menu = document.querySelector(".menu-links");
+    const hamburger = document.querySelector(".hamburger-menu, .nav-actions-mobile");
+
+    if (menu && hamburger && !hamburger.contains(e.target) && menu.classList.contains("open")) {
+      menu.classList.remove("open");
+      document.querySelector(".hamburger-icon").classList.remove("open");
+    }
+  });
+}
+
+// Typing Effect for Hero (Optional)
 function initTypingEffect() {
-  const titleElement = document.querySelector(".section__text__p2");
-  if (!titleElement) return;
+  const element = document.querySelector(".title-role");
+  if (!element) return;
 
-  const text = titleElement.textContent;
-  titleElement.textContent = "";
-  titleElement.style.borderRight = "2px solid var(--accent-primary)";
+  // Store original text
+  const originalText = element.innerHTML;
 
-  let charIndex = 0;
+  // Only run on larger screens
+  if (window.innerWidth < 768) return;
+
+  element.innerHTML = "";
+  element.style.borderRight = "2px solid var(--accent-primary)";
+
+  let i = 0;
+  const text = element.textContent || originalText.replace(/<[^>]*>/g, '');
 
   function type() {
-    if (charIndex < text.length) {
-      titleElement.textContent += text.charAt(charIndex);
-      charIndex++;
-      setTimeout(type, 80);
+    if (i < originalText.length) {
+      element.innerHTML = originalText.substring(0, i + 1);
+      i++;
+      setTimeout(type, 50);
     } else {
-      // Remove cursor after typing completes
-      setTimeout(() => {
-        titleElement.style.borderRight = "none";
-      }, 1000);
+      element.style.borderRight = "none";
     }
   }
 
-  // Start typing after a short delay
-  setTimeout(type, 500);
+  setTimeout(type, 800);
 }
 
-// Initialize everything on DOM load
+// Initialize Everything
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
   initScrollAnimations();
   initSmoothScroll();
-  initTypingEffect();
+  initMenuCloseOnOutsideClick();
 
-  // Add scroll event listeners
+  // Scroll event listeners (throttled)
+  let ticking = false;
   window.addEventListener("scroll", () => {
-    handleNavScroll();
-    updateActiveNavLink();
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        handleNavScroll();
+        updateActiveNavLink();
+        ticking = false;
+      });
+      ticking = true;
+    }
   });
 
   // Listen for system theme changes
@@ -176,13 +208,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Close mobile menu when clicking outside
-document.addEventListener("click", (e) => {
-  const menu = document.querySelector(".menu-links");
-  const hamburger = document.querySelector(".hamburger-menu");
-
-  if (menu && hamburger && !hamburger.contains(e.target) && menu.classList.contains("open")) {
-    menu.classList.remove("open");
-    document.querySelector(".hamburger-icon").classList.remove("open");
+// Add active class style
+const style = document.createElement('style');
+style.textContent = `
+  .nav-links a.active,
+  .menu-links a.active {
+    color: var(--accent-primary) !important;
   }
-});
+  .nav-links a.active::after {
+    width: 100%;
+  }
+`;
+document.head.appendChild(style);
