@@ -11,7 +11,7 @@
   </head>
   <body>
     <nav id="desktop-nav">
-      <div class="logo">AyT Consulting - Ömer M. Ayar</div>
+      <div class="logo">Ömer M. Ayar</div>
       <div>
         <ul class="nav-links">
           <li><a href="#focus" style="color: red">Current Focus</a></li>
@@ -21,10 +21,12 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">&#9790;</button>
     </nav>
     <nav id="hamburger-nav">
-      <div class="logo">AyT Consulting - Ömer Ayar</div>
+      <div class="logo">Ömer M. Ayar</div>
       <div class="hamburger-menu">
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">&#9790;</button>
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
           <span></span>
@@ -41,7 +43,7 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/oemay_profilbild.jpg" alt="Ömer Ayar profile picture" style="border-radius: 300px" />
+        <img src="./assets/oemay_profilbild.jpg" alt="Ömer Ayar profile picture" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
@@ -80,37 +82,29 @@
       </div>
     </section>
     <section id="focus">
-      <p class="section__text__p1">So let's talk about</p>
-      <h1 class="title">My current project</h1>
+      <p class="section__text__p1">Current Focus</p>
+      <h1 class="title">My Side Project</h1>
 
       <div class="details-container">
         <img src="./assets/github.png"
-             alt="project on github"
+             alt="View project on GitHub"
              class="icon"
              onclick="location.href='https://github.com/OeMA4/ayt-teamforge'"
         />
-
         <div>
-          <br>
           <p>
             This project aims to generate fair and balanced teams from a list of players with different skills and characteristics.
             Using a user-friendly interface, users can enter the player information and the application uses this data to create balanced teams.
-            The user interface allows for easy interaction where users can enter the players and their skills.
-            Once entered, they are presented with a visual representation of the generated teams, allowing them to check the distribution of players and their allocation to teams.
           </p>
-          <br>
           <p>
             The program takes into account various factors such as the strengths and weaknesses of individual players, their positions and possible synergies between team members.
-            It also offers the user the option to adjust or regenerate the teams if necessary to ensure that the teams remain fair and balanced.
+            It also offers the user the option to adjust or regenerate the teams if necessary.
           </p>
-          <br>
           <p>
-            How did I come up with this idea? There is a discussion with my friends every week about who needs to be in a team with whom to keep it "roughly" balanced, I want to save myself the discussions and let the algorithm do the work :)
+            How did I come up with this idea? There is a discussion with my friends every week about who needs to be in a team with whom to keep it "roughly" balanced. I want to save myself the discussions and let the algorithm do the work :)
           </p>
-
         </div>
       </div>
-
     </section>
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
@@ -148,7 +142,7 @@
               </p>
             </div>
           </div>
-          <div style="display: flex; gap: 2rem; margin-bottom: 2rem; margin-top: 0.5rem;">
+          <div class="about-containers">
             <div class="details-container">
               <img src="./assets/education.png"
                    alt="Education icon"
@@ -157,12 +151,7 @@
               <h3>Qualification</h3>
               <p>
                 B.Sc. Bachelors Degree<br />
-                <br />
-              <hr/>
-              <br />
-              <p>
                 CPSA-F Foundation Level
-              </p>
               </p>
             </div>
             <div class="details-container">
@@ -482,7 +471,7 @@
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2024 Ömer Ayar. All Rights Reserved.</p>
+      <p>Copyright &#169; 2025 Ömer Ayar. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
   </body>
