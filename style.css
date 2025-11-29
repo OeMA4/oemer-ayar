@@ -345,27 +345,22 @@ section {
 }
 
 #socials-container .icon {
-  width: 48px;
-  height: 48px;
-  padding: 12px;
-  background: var(--bg-tertiary);
-  border-radius: 12px;
+  width: 52px;
+  height: 52px;
+  padding: 10px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
   transition: all var(--transition-fast);
-  filter: var(--icon-filter, none);
-}
-
-[data-theme="dark"] #socials-container .icon {
-  filter: invert(1);
+  object-fit: contain;
 }
 
 #socials-container .icon:hover {
-  background: var(--accent-primary);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-}
-
-[data-theme="dark"] #socials-container .icon:hover {
-  filter: invert(0);
+  background: var(--accent-gradient);
+  border-color: transparent;
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.35);
+  filter: brightness(0) invert(1);
 }
 
 /* BUTTONS */
@@ -440,13 +435,18 @@ section {
   width: 60px;
   height: 60px;
   padding: 14px;
-  background: var(--bg-tertiary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   border-radius: 16px;
   margin-bottom: 1.5rem;
+  transition: all var(--transition-fast);
 }
 
-[data-theme="dark"] #focus .details-container .icon {
-  filter: invert(1);
+#focus .details-container .icon:hover {
+  background: var(--accent-gradient);
+  border-color: transparent;
+  transform: scale(1.1);
+  filter: brightness(0) invert(1);
 }
 
 #focus p {
@@ -505,13 +505,10 @@ section {
   width: 48px;
   height: 48px;
   padding: 10px;
-  background: rgba(99, 102, 241, 0.1);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   margin-bottom: 1rem;
-}
-
-[data-theme="dark"] .details-container .icon {
-  filter: invert(1);
 }
 
 .details-container h3 {
@@ -597,10 +594,6 @@ article .icon {
   padding: 0;
   background: transparent;
   cursor: default;
-}
-
-[data-theme="dark"] article .icon {
-  filter: invert(1);
 }
 
 article h3 {
@@ -708,12 +701,9 @@ article div {
   width: 40px;
   height: 40px;
   padding: 8px;
-  background: rgba(99, 102, 241, 0.1);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
-}
-
-[data-theme="dark"] .contact-icon {
-  filter: invert(1);
 }
 
 .contact-info-container p {
