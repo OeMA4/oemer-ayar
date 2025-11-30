@@ -1158,24 +1158,8 @@ section {
   justify-content: center;
   background: var(--bg-tertiary);
   border-radius: 10px;
+  color: var(--accent-primary);
   flex-shrink: 0;
-}
-
-/* Brand-colored icons */
-.contact-icon--linkedin {
-  background: rgba(10, 102, 194, 0.15);
-}
-
-.contact-icon--xing {
-  background: rgba(0, 101, 103, 0.15);
-}
-
-.contact-icon--github {
-  background: rgba(240, 246, 252, 0.1);
-}
-
-.contact-icon--freelance {
-  background: rgba(255, 107, 53, 0.15);
 }
 
 .contact-details {
