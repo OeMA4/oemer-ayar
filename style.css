@@ -760,22 +760,6 @@ section {
   height: 40px;
   width: auto;
   object-fit: contain;
-  filter: grayscale(100%) brightness(1.5);
-  opacity: 0.7;
-  transition: all var(--transition-fast);
-}
-
-.project-card:hover .project-logo {
-  filter: none;
-  opacity: 1;
-}
-
-[data-theme="light"] .project-logo {
-  filter: grayscale(100%);
-}
-
-[data-theme="light"] .project-card:hover .project-logo {
-  filter: none;
 }
 
 .project-icon {
