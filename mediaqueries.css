@@ -44,6 +44,7 @@
 
   .hero-cta {
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .hero-visual {
@@ -52,6 +53,7 @@
 
   .profile-card {
     max-width: 350px;
+    margin: 0 auto;
   }
 
   .scroll-indicator {
@@ -91,6 +93,16 @@
 
   .testimonials-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .project-tech {
+    flex-wrap: wrap;
   }
 }
 
@@ -165,8 +177,8 @@
   }
 
   .status-badge {
-    font-size: 0.75rem;
-    padding: 0.4rem 0.75rem;
+    font-size: 0.7rem;
+    padding: 0.35rem 0.6rem;
   }
 
   .name {
@@ -174,16 +186,17 @@
   }
 
   .title-role {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .hero-description {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .hero-cta {
     flex-direction: column;
     width: 100%;
+    gap: 0.75rem;
   }
 
   .hero-cta .btn {
@@ -213,9 +226,17 @@
     padding: 1.25rem;
   }
 
+  .tech-category h3 {
+    font-size: 1rem;
+  }
+
+  .tech-tags {
+    gap: 0.4rem;
+  }
+
   .tech-tag {
-    font-size: 0.8rem;
-    padding: 0.35rem 0.7rem;
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
   }
 
   .project-card {
@@ -230,12 +251,58 @@
     font-size: 0.9rem;
   }
 
+  .project-status {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .project-tech {
+    gap: 0.4rem;
+  }
+
+  .project-tech span {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .project-links .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
   .timeline-content {
     padding: 1rem 1.25rem;
   }
 
   .timeline-content h3 {
     font-size: 1rem;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.9rem;
+  }
+
+  .testimonial-quote {
+    font-size: 2rem;
+  }
+
+  .author-name {
+    font-size: 0.95rem;
+  }
+
+  .author-title,
+  .author-company {
+    font-size: 0.8rem;
   }
 
   .contact-card {
@@ -245,6 +312,15 @@
   .contact-icon {
     width: 40px;
     height: 40px;
+  }
+
+  .contact-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact-value {
+    font-size: 0.9rem;
   }
 
   footer {
@@ -263,25 +339,74 @@
 /* Very Small Phones */
 @media screen and (max-width: 400px) {
   .name {
-    font-size: 2rem;
+    font-size: 1.75rem;
+  }
+
+  .title-role {
+    font-size: 0.9rem;
   }
 
   .profile-image {
-    width: 140px;
-    height: 140px;
+    width: 130px;
+    height: 130px;
+  }
+
+  .profile-card {
+    padding: 1.25rem;
   }
 
   .stat {
     flex: 1;
-    min-width: 80px;
+    min-width: 70px;
   }
 
   .stat-number {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .stat-label {
+    font-size: 0.6rem;
+  }
+
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .tech-category h3 {
+    font-size: 0.9rem;
+  }
+
+  .tech-tag {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .project-card h3 {
+    font-size: 1rem;
+  }
+
+  .project-logo {
+    height: 30px;
+  }
+
+  .timeline-content h3 {
+    font-size: 0.9rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.85rem;
+  }
+
+  .testimonial-text {
+    font-size: 0.85rem;
+  }
+
+  .contact-label {
     font-size: 0.65rem;
+  }
+
+  .contact-value {
+    font-size: 0.85rem;
   }
 }
 
