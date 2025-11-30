@@ -88,6 +88,10 @@
     max-width: 400px;
     margin: 0 auto;
   }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Small Tablets / Large Phones */
