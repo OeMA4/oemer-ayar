@@ -614,6 +614,16 @@ section {
   box-shadow: var(--shadow-md);
 }
 
+.tech-category.ai-category {
+  border-color: rgba(168, 85, 247, 0.3);
+  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(168, 85, 247, 0.05) 100%);
+}
+
+.tech-category.ai-category:hover {
+  border-color: rgba(168, 85, 247, 0.5);
+  box-shadow: 0 8px 24px rgba(168, 85, 247, 0.15);
+}
+
 .tech-category h3 {
   display: flex;
   align-items: center;
