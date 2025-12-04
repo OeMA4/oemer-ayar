@@ -28,6 +28,14 @@
     display: flex;
   }
 
+  /* Hide some code snippets on tablets */
+  .code-snippet.snippet-5,
+  .code-snippet.snippet-6,
+  .code-snippet.snippet-7,
+  .code-snippet.snippet-8 {
+    display: none;
+  }
+
   .hero-content {
     grid-template-columns: 1fr;
     text-align: center;
@@ -168,6 +176,18 @@
 
   .logo {
     font-size: 1.25rem;
+  }
+
+  /* Hide all code snippets on mobile, keep grid subtle */
+  .code-snippets {
+    display: none;
+  }
+
+  .floating-particles::before,
+  .floating-particles::after {
+    width: 150px;
+    height: 150px;
+    opacity: 0.1;
   }
 
   #hero {
@@ -423,6 +443,17 @@
   html {
     scroll-behavior: auto;
   }
+
+  .grid-overlay,
+  .code-snippets,
+  .floating-particles {
+    animation: none;
+  }
+
+  .code-snippet {
+    opacity: 0.3;
+    animation: none;
+  }
 }
 
 /* Print Styles */
@@ -432,7 +463,8 @@
   .theme-toggle,
   .scroll-indicator,
   .hero-cta,
-  #testimonials {
+  #testimonials,
+  .hero-background {
     display: none !important;
   }
 
