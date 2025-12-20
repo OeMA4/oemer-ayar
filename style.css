@@ -714,8 +714,8 @@ nav {
 }
 
 .profile-image {
-  width: 200px;
-  height: 200px;
+  width: 360px;
+  height: 360px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--bg-tertiary);
