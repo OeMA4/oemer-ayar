@@ -718,6 +718,7 @@ nav {
   height: 360px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: 70% center;
   border: 3px solid var(--bg-tertiary);
 }
 
