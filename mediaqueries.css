@@ -99,6 +99,10 @@
     margin: 0 auto;
   }
 
+  .contact-form {
+    padding: 1.5rem;
+  }
+
   .testimonials-grid {
     grid-template-columns: 1fr;
   }
@@ -373,6 +377,23 @@
     font-size: 0.9rem;
   }
 
+  .contact-form {
+    padding: 1.25rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+  }
+
   footer {
     padding: 2rem 4%;
   }
@@ -494,7 +515,9 @@
   .scroll-indicator,
   .hero-cta,
   #testimonials,
-  .hero-background {
+  .hero-background,
+  .back-to-top,
+  .contact-form {
     display: none !important;
   }
 

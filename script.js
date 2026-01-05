@@ -2,6 +2,59 @@
 // ÖMER AYAR - PORTFOLIO SCRIPTS
 // ================================================
 
+// Language Switcher
+let currentLanguage = 'de';
+
+function setLanguage(lang) {
+  currentLanguage = lang;
+  localStorage.setItem('language', lang);
+
+  // Update active button state
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+
+  // Update HTML lang attribute
+  document.documentElement.lang = lang === 'de' ? 'de' : 'en';
+
+  // Update all translatable elements
+  document.querySelectorAll('[data-de][data-en]').forEach(el => {
+    const text = el.dataset[lang];
+    if (text) {
+      // Check if element contains only text or has innerHTML
+      if (text.includes('<')) {
+        el.innerHTML = text;
+      } else {
+        el.textContent = text;
+      }
+    }
+  });
+
+  // Update placeholders for form inputs
+  document.querySelectorAll('[data-placeholder-de][data-placeholder-en]').forEach(el => {
+    el.placeholder = el.dataset[`placeholder${lang.charAt(0).toUpperCase() + lang.slice(1)}`] || el.placeholder;
+  });
+}
+
+function initLanguage() {
+  const savedLang = localStorage.getItem('language');
+  const browserLang = navigator.language.startsWith('de') ? 'de' : 'en';
+  const initialLang = savedLang || browserLang;
+
+  // Set initial language without animation
+  currentLanguage = initialLang;
+
+  // Update button states
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === initialLang);
+  });
+
+  // Apply translations if not German (German is default in HTML)
+  if (initialLang !== 'de') {
+    setLanguage(initialLang);
+  }
+}
+
 // Hamburger Menu Toggle
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
@@ -136,6 +189,18 @@ function handleNavScroll() {
   }
 }
 
+// Back to Top Button Visibility
+function handleBackToTop() {
+  const backToTop = document.querySelector(".back-to-top");
+  if (!backToTop) return;
+
+  if (window.scrollY > 500) {
+    backToTop.classList.add("visible");
+  } else {
+    backToTop.classList.remove("visible");
+  }
+}
+
 // Close mobile menu on outside click
 function initMenuCloseOnOutsideClick() {
   document.addEventListener("click", (e) => {
@@ -181,6 +246,7 @@ function initTypingEffect() {
 
 // Initialize Everything
 document.addEventListener("DOMContentLoaded", () => {
+  initLanguage();
   initTheme();
   initScrollAnimations();
   initSmoothScroll();
@@ -193,6 +259,7 @@ document.addEventListener("DOMContentLoaded", () => {
       window.requestAnimationFrame(() => {
         handleNavScroll();
         updateActiveNavLink();
+        handleBackToTop();
         ticking = false;
       });
       ticking = true;
