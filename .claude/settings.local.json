@@ -8,7 +8,9 @@
       "WebFetch(domain:www.upwork.com)",
       "WebFetch(domain:www.hostinger.com)",
       "Bash(git revert:*)",
-      "Bash(git restore:*)"
+      "Bash(git restore:*)",
+      "mcp__ide__getDiagnostics",
+      "Bash(findstr:*)"
     ],
     "deny": [],
     "ask": []
