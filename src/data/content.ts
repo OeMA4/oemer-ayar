@@ -158,14 +158,14 @@ export const projects = {
       title: { de: 'Enterprise Backend-Entwicklung', en: 'Enterprise backend development' },
       sector: { de: 'Finanzdienstleistung', en: 'Financial services' },
       description: {
-        de: 'Backend-Entwicklung in einer Microservice-Architektur. Innerhalb von sechs Monaten nach Projekteinstieg ging das Produkt gemeinsam mit dem Team in Produktion; seitdem Begleitung in Betrieb und Wartung sowie weitere Produkte mitentwickelt und live gebracht. Sprints und Retrospektiven eingeführt und moderiert – für ein einheitliches Vorgehen bei Bugs, Problemlösung und Kommunikation.',
-        en: 'Backend development in a microservice architecture. Within six months of joining, the product went into production together with the team; since then supporting operations and maintenance and helping build and launch further products. Introduced and facilitated sprints and retrospectives – giving the team a shared approach to bugs, problem solving and communication.',
+        de: 'Backend-Entwicklung in einer Microservice-Architektur. Innerhalb von sechs Monaten nach Projekteinstieg ging das Produkt gemeinsam mit dem Team in Produktion; seitdem Begleitung in Betrieb und Wartung sowie weitere Produkte mitentwickelt und live gebracht. Sprints und Retrospektiven eingeführt und moderiert – für ein einheitliches Vorgehen bei Bugs, Problemlösung und Kommunikation. Seit Anfang 2026 überwiegend KI-gestützte Entwicklung, unter anderem mit GitHub Copilot.',
+        en: 'Backend development in a microservice architecture. Within six months of joining, the product went into production together with the team; since then supporting operations and maintenance and helping build and launch further products. Introduced and facilitated sprints and retrospectives – giving the team a shared approach to bugs, problem solving and communication. Since early 2026, development has been predominantly AI-assisted, including GitHub Copilot.',
       },
       role: {
         de: 'Senior Backend Developer',
         en: 'Senior Backend Developer',
       },
-      tech: ['Java', 'Kotlin', 'Spring Boot', 'TypeScript', 'AWS'],
+      tech: ['Java', 'Kotlin', 'Spring Boot', 'TypeScript', 'AWS', 'GitHub Copilot'],
       logo: { src: dvagLogo, alt: 'DVAG' },
       status: 'current',
     },
@@ -279,7 +279,7 @@ export const tech = {
     },
     {
       title: { de: 'AI & Agentic Coding', en: 'AI & agentic coding' },
-      skills: [adv('Claude Code'), adv('ChatGPT'), basic('GitHub Copilot'), basic('Prompt Engineering')],
+      skills: [adv('Claude Code'), adv('ChatGPT'), adv('GitHub Copilot'), basic('Prompt Engineering')],
     },
   ] as { title: L; skills: Skill[] }[],
 };
