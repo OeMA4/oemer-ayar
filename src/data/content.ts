@@ -182,6 +182,17 @@ export const projects = {
       link: links.github,
     },
     {
+      period: { de: '2023 – 2024', en: '2023 – 2024' },
+      title: { de: 'Fullstack-Entwicklung', en: 'Fullstack development' },
+      sector: { de: 'Public Sector', en: 'Public sector' },
+      description: {
+        de: 'Entwicklung von E-Government-Anwendungen für digitale Verwaltungsprozesse. Unterstützung bei der Einführung agiler Prozesse und Moderation von Team-Meetings zur Prozessoptimierung.',
+        en: 'Development of e-government applications for digital administrative processes. Supporting the introduction of agile processes and facilitating team meetings for process optimisation.',
+      },
+      tech: ['Java', 'Spring', 'Angular', 'Scrum'],
+      logo: { src: bafaLogo, alt: 'BAFA' },
+    },
+    {
       period: { de: '2022 – 2023', en: '2022 – 2023' },
       title: { de: 'Fullstack-Entwicklung', en: 'Fullstack development' },
       sector: { de: 'Logistik & Transport', en: 'Logistics & transport' },
@@ -213,17 +224,6 @@ export const projects = {
       },
       tech: ['Java', 'Angular', 'Docker', 'Scrum'],
       logo: { src: manLogo, alt: 'MAN' },
-    },
-    {
-      period: { de: '2018 – 2019', en: '2018 – 2019' },
-      title: { de: 'Fullstack-Entwicklung', en: 'Fullstack development' },
-      sector: { de: 'Public Sector', en: 'Public sector' },
-      description: {
-        de: 'Entwicklung von E-Government-Anwendungen für digitale Verwaltungsprozesse. Unterstützung bei der Einführung agiler Prozesse und Moderation von Team-Meetings zur Prozessoptimierung.',
-        en: 'Development of e-government applications for digital administrative processes. Supporting the introduction of agile processes and facilitating team meetings for process optimisation.',
-      },
-      tech: ['Java', 'Spring', 'Angular', 'Scrum'],
-      logo: { src: bafaLogo, alt: 'BAFA' },
     },
   ] as Project[],
   industriesTitle: { de: 'Branchen-Erfahrung', en: 'Industry experience' },
