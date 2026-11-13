@@ -1,0 +1,36 @@
+---
+import Section from './Section.astro';
+import { tech, type Lang } from '../data/content';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+---
+
+<Section id="tech" index="03" title={tech.title[lang]} intro={tech.intro[lang]}>
+  <dl class="skill-groups">
+    {
+      tech.groups.map((group) => (
+        <div class="skill-group reveal">
+          <dt class="mono">{group.title[lang]}</dt>
+          <dd>
+            <ul class="tags tags-lg" role="list">
+              {group.skills.map((skill) => (
+                <li class={skill.level === 'basic' ? 'tag-basic' : undefined} title={tech.legend[skill.level][lang]}>
+                  {typeof skill.name === 'string' ? skill.name : skill.name[lang]}
+                </li>
+              ))}
+            </ul>
+          </dd>
+        </div>
+      ))
+    }
+  </dl>
+
+  <ul class="tags legend" role="list">
+    <li>{tech.legend.advanced[lang]}</li>
+    <li class="tag-basic">{tech.legend.basic[lang]}</li>
+  </ul>
+</Section>

@@ -1,0 +1,30 @@
+---
+import Section from './Section.astro';
+import { testimonials, type Lang } from '../data/content';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+---
+
+<Section id="references" index="05" title={testimonials.title[lang]} intro={testimonials.intro[lang]}>
+  <div class="quotes">
+    {
+      testimonials.items.map((item) => (
+        <figure class="quote reveal">
+          <blockquote>
+            <p>{item.quote[lang]}</p>
+          </blockquote>
+          <figcaption>
+            <strong>{item.name}</strong>
+            <span>{item.role[lang]}</span>
+            <span>{item.company}</span>
+          </figcaption>
+        </figure>
+      ))
+    }
+  </div>
+  {testimonials.translatedNote[lang] && <p class="note mono">{testimonials.translatedNote[lang]}</p>}
+</Section>

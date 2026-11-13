@@ -1,0 +1,71 @@
+---
+import { Image } from 'astro:assets';
+import Section from './Section.astro';
+import { projects, ui, type Lang } from '../data/content';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+---
+
+<Section id="projects" index="02" title={projects.title[lang]} intro={projects.intro[lang]}>
+  <div class="rows">
+    {
+      projects.items.map((project) => (
+        <article class="row reveal">
+          <div class="row-meta">
+            <span class="mono">{project.period[lang]}</span>
+            {project.status === 'current' && (
+              <span class="badge badge-live">
+                <span class="status-dot" aria-hidden="true" />
+                {ui.current[lang]}
+              </span>
+            )}
+            {project.status === 'side' && <span class="badge">{ui.sideProject[lang]}</span>}
+          </div>
+
+          <div class="row-body">
+            <div class="row-title">
+              <div>
+                <h3>{project.title[lang]}</h3>
+                <p class="row-sub">{project.sector[lang]}</p>
+              </div>
+              {project.logo && (
+                <span class="logo-chip">
+                  <Image src={project.logo.src} alt={project.logo.alt} height={56} densities={[1, 2]} />
+                </span>
+              )}
+            </div>
+            <p>{project.description[lang]}</p>
+            {project.role && (
+              <p class="row-role">
+                <span class="mono">{ui.role[lang]}</span>
+                {project.role[lang]}
+              </p>
+            )}
+            <ul class="tags" role="list">
+              {project.tech.map((t) => <li>{t}</li>)}
+            </ul>
+            {project.link && (
+              <a class="text-link" href={project.link} target="_blank" rel="noopener noreferrer">
+                {ui.github[lang]}
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M7 17 17 7M8 7h9v9" />
+                </svg>
+              </a>
+            )}
+          </div>
+        </article>
+      ))
+    }
+  </div>
+
+  <div class="industries reveal">
+    <h3 class="mono">{projects.industriesTitle[lang]}</h3>
+    <ul role="list">
+      {projects.industries.map((industry) => <li>{industry[lang]}</li>)}
+    </ul>
+  </div>
+</Section>

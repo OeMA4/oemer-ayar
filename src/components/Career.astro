@@ -1,0 +1,64 @@
+---
+import Section from './Section.astro';
+import { career, ui, type Lang } from '../data/content';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+---
+
+<Section id="career" index="04" title={career.title[lang]} intro={career.intro[lang]}>
+  <div class="rows">
+    {
+      career.items.map((item) => (
+        <article class="row reveal">
+          <div class="row-meta">
+            <span class="mono">{item.period[lang]}</span>
+            {item.current && (
+              <span class="badge badge-live">
+                <span class="status-dot" aria-hidden="true" />
+                {ui.current[lang]}
+              </span>
+            )}
+          </div>
+          <div class="row-body">
+            <h3>{item.title[lang]}</h3>
+            <p class="row-sub">{item.company}</p>
+            <p>{item.text[lang]}</p>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+
+  <div class="extras">
+    <div class="extra reveal">
+      <h3 class="mono">{career.qualificationsTitle[lang]}</h3>
+      <ul role="list">
+        {
+          career.qualifications.map((q) => (
+            <li>
+              <strong>{q.title[lang]}</strong>
+              <span>{q.text[lang]}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="extra reveal">
+      <h3 class="mono">{career.languagesTitle[lang]}</h3>
+      <ul role="list">
+        {
+          career.languages.map((l) => (
+            <li>
+              <strong>{l.name[lang]}</strong>
+              <span>{l.level[lang]}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</Section>

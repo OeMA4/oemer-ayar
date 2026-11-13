@@ -1,0 +1,60 @@
+---
+import { ui, site, homePath, langs, type Lang } from '../data/content';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const nav = [
+  { href: '#services', label: ui.nav.services[lang] },
+  { href: '#projects', label: ui.nav.projects[lang] },
+  { href: '#tech', label: ui.nav.tech[lang] },
+  { href: '#career', label: ui.nav.career[lang] },
+  { href: '#about', label: ui.nav.about[lang] },
+];
+---
+
+<a href="#main" class="skip-link">{ui.skip[lang]}</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href={homePath[lang]} class="wordmark" aria-label={site.name}>
+      <span class="wordmark-mark" aria-hidden="true">ÖA</span>
+      <span class="wordmark-name">{site.name}</span>
+    </a>
+
+    <nav class="site-nav" id="site-nav" aria-label={ui.menu[lang]}>
+      {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+      <a href="#contact" class="nav-contact-mobile">{ui.nav.contact[lang]}</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label={ui.langSwitch[lang]}>
+        {
+          langs.map((l) => (
+            <a href={homePath[l]} hreflang={l} lang={l} aria-current={l === lang ? 'true' : undefined}>
+              {l.toUpperCase()}
+            </a>
+          ))
+        }
+      </div>
+
+      <button type="button" class="icon-btn" data-theme-toggle aria-label={ui.themeToggle[lang]}>
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+        </svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"></path>
+        </svg>
+      </button>
+
+      <a href="#contact" class="btn btn-primary btn-sm header-cta">{ui.nav.contact[lang]}</a>
+
+      <button type="button" class="icon-btn menu-btn" data-menu-toggle aria-label={ui.menu[lang]} aria-expanded="false" aria-controls="site-nav">
+        <span class="menu-bars" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>

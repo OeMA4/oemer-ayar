@@ -1,0 +1,187 @@
+---
+import '@fontsource-variable/geist';
+import '@fontsource-variable/geist-mono';
+import '../styles/global.css';
+import { site, links, homePath, type Lang } from '../data/content';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const canonical = new URL(homePath[lang], site.url).href;
+const ogImage = new URL('/og.jpg', site.url).href;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: site.name,
+  jobTitle: site.role,
+  url: site.url,
+  image: ogImage,
+  worksFor: { '@type': 'Organization', name: site.company },
+  address: { '@type': 'PostalAddress', addressLocality: 'Frankfurt am Main', addressCountry: 'DE' },
+  knowsLanguage: ['de', 'en', 'tr'],
+  sameAs: [links.linkedin, links.xing, links.github, links.freelance],
+};
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{site.title[lang]}</title>
+    <meta name="description" content={site.description[lang]} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="de" href={new URL(homePath.de, site.url).href} />
+    <link rel="alternate" hreflang="en" href={new URL(homePath.en, site.url).href} />
+    <link rel="alternate" hreflang="x-default" href={new URL(homePath.de, site.url).href} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#f6f6f3" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0c0e13" media="(prefers-color-scheme: dark)" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={site.title[lang]} />
+    <meta property="og:description" content={site.description[lang]} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:locale" content={lang === 'de' ? 'de_DE' : 'en_US'} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <!-- Farbschema vor dem ersten Rendern setzen, damit nichts aufblitzt -->
+    <script is:inline>
+      (function () {
+        var root = document.documentElement;
+        var saved = null;
+        try {
+          saved = localStorage.getItem('theme');
+        } catch (e) {}
+        var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+        root.dataset.theme = dark ? 'dark' : 'light';
+        root.classList.add('js');
+      })();
+    </script>
+  </head>
+  <body>
+    <slot />
+
+    <script>
+      const root = document.documentElement;
+
+      // Farbschema umschalten
+      document.querySelectorAll<HTMLButtonElement>('[data-theme-toggle]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+          root.dataset.theme = next;
+          try {
+            localStorage.setItem('theme', next);
+          } catch {}
+        });
+      });
+
+      // Mobiles Menü
+      const menuBtn = document.querySelector<HTMLButtonElement>('[data-menu-toggle]');
+      const header = document.querySelector<HTMLElement>('.site-header');
+      const closeMenu = () => {
+        header?.classList.remove('menu-open');
+        menuBtn?.setAttribute('aria-expanded', 'false');
+      };
+      menuBtn?.addEventListener('click', () => {
+        const open = header?.classList.toggle('menu-open') ?? false;
+        menuBtn.setAttribute('aria-expanded', String(open));
+      });
+      document.querySelectorAll('.site-nav a').forEach((a) => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', (e) => e.key === 'Escape' && closeMenu());
+
+      // Header-Linie beim Scrollen
+      const onScroll = () => header?.classList.toggle('scrolled', window.scrollY > 8);
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      // Elemente beim Scrollen einblenden
+      const revealables = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('in');
+                io.unobserve(entry.target);
+              }
+            }
+          },
+          { rootMargin: '0px 0px -8% 0px', threshold: 0.05 },
+        );
+        revealables.forEach((el) => io.observe(el));
+      } else {
+        revealables.forEach((el) => el.classList.add('in'));
+      }
+
+      // Aktiven Menüpunkt markieren
+      const navLinks = new Map<string, HTMLAnchorElement>();
+      document.querySelectorAll<HTMLAnchorElement>('.site-nav a[href^="#"]').forEach((a) => {
+        navLinks.set(a.getAttribute('href')!.slice(1), a);
+      });
+      if ('IntersectionObserver' in window) {
+        const spy = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (!entry.isIntersecting) continue;
+              navLinks.forEach((a) => a.removeAttribute('aria-current'));
+              navLinks.get(entry.target.id)?.setAttribute('aria-current', 'true');
+            }
+          },
+          { rootMargin: '-40% 0px -55% 0px' },
+        );
+        navLinks.forEach((_, id) => {
+          const section = document.getElementById(id);
+          if (section) spy.observe(section);
+        });
+      }
+
+      // E-Mail-Adresse erst im Browser zusammensetzen (Spam-Schutz)
+      document.querySelectorAll<HTMLAnchorElement>('[data-mail-user]').forEach((a) => {
+        const address = `${a.dataset.mailUser}@${a.dataset.mailDomain}`;
+        a.href = `mailto:${address}`;
+        const label = a.querySelector('[data-mail-label]');
+        if (label) label.textContent = address;
+      });
+
+      // Kontaktformular ohne Seitenwechsel absenden
+      const form = document.querySelector<HTMLFormElement>('[data-contact-form]');
+      if (form) {
+        const status = form.querySelector<HTMLElement>('[data-form-status]')!;
+        const button = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+        const buttonLabel = button.querySelector<HTMLElement>('[data-label]')!;
+        const idleLabel = buttonLabel.textContent;
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          button.disabled = true;
+          buttonLabel.textContent = form.dataset.sending ?? idleLabel;
+          status.textContent = '';
+          status.removeAttribute('data-state');
+          try {
+            const res = await fetch(form.action, {
+              method: 'POST',
+              body: new FormData(form),
+              headers: { Accept: 'application/json' },
+            });
+            if (!res.ok) throw new Error(String(res.status));
+            form.reset();
+            status.dataset.state = 'success';
+            status.textContent = form.dataset.success ?? '';
+          } catch {
+            status.dataset.state = 'error';
+            status.textContent = form.dataset.error ?? '';
+          } finally {
+            button.disabled = false;
+            buttonLabel.textContent = idleLabel;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

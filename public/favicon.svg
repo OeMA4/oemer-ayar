@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="7" fill="#10131a"/>
+  <text x="16" y="21.5" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="13" font-weight="700" letter-spacing="-0.5" text-anchor="middle" fill="#f6f6f3">ÖA</text>
+  <rect x="7" y="25" width="18" height="2" rx="1" fill="#8aa2ff"/>
+</svg>

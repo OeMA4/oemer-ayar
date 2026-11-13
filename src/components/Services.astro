@@ -1,0 +1,26 @@
+---
+import Section from './Section.astro';
+import { services, type Lang } from '../data/content';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+---
+
+<Section id="services" index="01" title={services.title[lang]} intro={services.intro[lang]}>
+  <ol class="service-list">
+    {
+      services.items.map((item, i) => (
+        <li class="service reveal">
+          <span class="service-no mono" aria-hidden="true">
+            {String(i + 1).padStart(2, '0')}
+          </span>
+          <h3>{item.title[lang]}</h3>
+          <p>{item.text[lang]}</p>
+        </li>
+      ))
+    }
+  </ol>
+</Section>
