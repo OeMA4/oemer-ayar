@@ -182,7 +182,7 @@ export const projects = {
       link: links.github,
     },
     {
-      period: { de: '2023 – 2024', en: '2023 – 2024' },
+      period: { de: '2022 – 2024', en: '2022 – 2024' },
       title: { de: 'Fullstack-Entwicklung', en: 'Fullstack development' },
       sector: { de: 'Public Sector', en: 'Public sector' },
       description: {
@@ -193,18 +193,18 @@ export const projects = {
       logo: { src: bafaLogo, alt: 'BAFA' },
     },
     {
-      period: { de: '2022 – 2023', en: '2022 – 2023' },
+      period: { de: '2021 – 2022', en: '2021 – 2022' },
       title: { de: 'Fullstack-Entwicklung', en: 'Fullstack development' },
-      sector: { de: 'Logistik & Transport', en: 'Logistics & transport' },
+      sector: { de: 'Automotive', en: 'Automotive' },
       description: {
-        de: 'Entwicklung modularer Softwarekomponenten in einem Enterprise-Umfeld. Etablierung agiler Arbeitsmethoden durch Einführung von Refinements und Moderation von Team-Retrospektiven.',
-        en: 'Development of modular software components in an enterprise environment. Establishing agile working methods by introducing refinements and facilitating team retrospectives.',
+        de: 'Entwicklung einer B2B-Plattform im Automotive-Umfeld. Etablierung der Scrum-Arbeitsweise im Team inkl. Moderation von Dailys, Retrospektiven und Refinements.',
+        en: 'Development of a B2B platform in the automotive sector. Establishing Scrum in the team, including facilitation of dailies, retrospectives and refinements.',
       },
-      tech: ['Java', 'Spring Boot', 'Angular', 'Scrum'],
-      logo: { src: dbLogo, alt: 'Deutsche Bahn' },
+      tech: ['Java', 'Angular', 'Docker', 'Scrum'],
+      logo: { src: manLogo, alt: 'MAN' },
     },
     {
-      period: { de: '2021 – 2022', en: '2021 – 2022' },
+      period: { de: '2019 – 2021', en: '2019 – 2021' },
       title: { de: 'Backend-Entwicklung', en: 'Backend development' },
       sector: { de: 'Logistik & Transport', en: 'Logistics & transport' },
       description: {
@@ -215,15 +215,15 @@ export const projects = {
       logo: { src: dbLogo, alt: 'Deutsche Bahn' },
     },
     {
-      period: { de: '2019 – 2021', en: '2019 – 2021' },
+      period: { de: '2016 – 2018', en: '2016 – 2018' },
       title: { de: 'Fullstack-Entwicklung', en: 'Fullstack development' },
-      sector: { de: 'Automotive', en: 'Automotive' },
+      sector: { de: 'Logistik & Transport', en: 'Logistics & transport' },
       description: {
-        de: 'Entwicklung einer B2B-Plattform im Automotive-Umfeld. Etablierung der Scrum-Arbeitsweise im Team inkl. Moderation von Dailys, Retrospektiven und Refinements.',
-        en: 'Development of a B2B platform in the automotive sector. Establishing Scrum in the team, including facilitation of dailies, retrospectives and refinements.',
+        de: 'Entwicklung modularer Softwarekomponenten in einem Enterprise-Umfeld. Etablierung agiler Arbeitsmethoden durch Einführung von Refinements und Moderation von Team-Retrospektiven.',
+        en: 'Development of modular software components in an enterprise environment. Establishing agile working methods by introducing refinements and facilitating team retrospectives.',
       },
-      tech: ['Java', 'Angular', 'Docker', 'Scrum'],
-      logo: { src: manLogo, alt: 'MAN' },
+      tech: ['Java', 'Spring Boot', 'Angular', 'Scrum'],
+      logo: { src: dbLogo, alt: 'Deutsche Bahn' },
     },
   ] as Project[],
   industriesTitle: { de: 'Branchen-Erfahrung', en: 'Industry experience' },
