@@ -154,7 +154,7 @@ export const projects = {
   },
   items: [
     {
-      period: { de: '2024 – heute', en: '2024 – present' },
+      period: { de: '05/2024 – heute', en: '05/2024 – present' },
       title: { de: 'Enterprise Backend-Entwicklung', en: 'Enterprise backend development' },
       sector: { de: 'Finanzdienstleistung', en: 'Financial services' },
       description: {
@@ -182,47 +182,47 @@ export const projects = {
       link: links.github,
     },
     {
-      period: { de: '2022 – 2024', en: '2022 – 2024' },
+      period: { de: '07/2022 – 03/2024', en: '07/2022 – 03/2024' },
       title: { de: 'Fullstack-Entwicklung', en: 'Fullstack development' },
       sector: { de: 'Public Sector', en: 'Public sector' },
       description: {
         de: 'Entwicklung von E-Government-Anwendungen für digitale Verwaltungsprozesse. Unterstützung bei der Einführung agiler Prozesse und Moderation von Team-Meetings zur Prozessoptimierung.',
         en: 'Development of e-government applications for digital administrative processes. Supporting the introduction of agile processes and facilitating team meetings for process optimisation.',
       },
-      tech: ['Java', 'Spring', 'Angular', 'Scrum'],
+      tech: ['Java', 'Spring Boot', 'Angular', 'TypeScript', 'MySQL', 'Keycloak', 'Hibernate'],
       logo: { src: bafaLogo, alt: 'BAFA' },
     },
     {
-      period: { de: '2021 – 2022', en: '2021 – 2022' },
+      period: { de: '11/2021 – 06/2022', en: '11/2021 – 06/2022' },
       title: { de: 'Fullstack-Entwicklung', en: 'Fullstack development' },
       sector: { de: 'Automotive', en: 'Automotive' },
       description: {
         de: 'Entwicklung einer B2B-Plattform im Automotive-Umfeld. Etablierung der Scrum-Arbeitsweise im Team inkl. Moderation von Dailys, Retrospektiven und Refinements.',
         en: 'Development of a B2B platform in the automotive sector. Establishing Scrum in the team, including facilitation of dailies, retrospectives and refinements.',
       },
-      tech: ['Java', 'Angular', 'Docker', 'Scrum'],
+      tech: ['Kotlin', 'Spring Boot', 'Kafka', 'React', 'TypeScript', 'Docker', 'AWS', 'PostgreSQL'],
       logo: { src: manLogo, alt: 'MAN' },
     },
     {
-      period: { de: '2019 – 2021', en: '2019 – 2021' },
+      period: { de: '07/2019 – 10/2021', en: '07/2019 – 10/2021' },
       title: { de: 'Fullstack-Entwicklung', en: 'Fullstack development' },
       sector: { de: 'Logistik & Transport', en: 'Logistics & transport' },
       description: {
         de: 'Entwicklung interner Verwaltungssysteme mit Fokus auf Performance und Skalierbarkeit. Einführung strukturierter Dailys und kontinuierliche Prozessverbesserung durch regelmäßige Retrospektiven.',
         en: 'Development of internal management systems with a focus on performance and scalability. Introduction of structured dailies and continuous process improvement through regular retrospectives.',
       },
-      tech: ['Kotlin', 'Spring Boot', 'Vue.js', 'Scrum'],
+      tech: ['Kotlin', 'Spring Boot', 'Kafka', 'Vue.js', 'TypeScript', 'Docker', 'AWS'],
       logo: { src: dbLogo, alt: 'Deutsche Bahn' },
     },
     {
-      period: { de: '2016 – 2018', en: '2016 – 2018' },
+      period: { de: '04/2018 – 06/2019', en: '04/2018 – 06/2019' },
       title: { de: 'Backend-Entwicklung', en: 'Backend development' },
       sector: { de: 'Logistik & Transport', en: 'Logistics & transport' },
       description: {
         de: 'Entwicklung modularer Softwarekomponenten in einem Enterprise-Umfeld. Etablierung agiler Arbeitsmethoden durch Einführung von Refinements und Moderation von Team-Retrospektiven.',
         en: 'Development of modular software components in an enterprise environment. Establishing agile working methods by introducing refinements and facilitating team retrospectives.',
       },
-      tech: ['Java', 'Spring Boot', 'Angular', 'Scrum'],
+      tech: ['Kotlin', 'Spring Boot', 'Apache POI'],
       logo: { src: dbLogo, alt: 'Deutsche Bahn' },
     },
   ] as Project[],
@@ -294,7 +294,7 @@ export const career = {
   },
   items: [
     {
-      period: { de: '2024 – heute', en: '2024 – present' },
+      period: { de: '04/2024 – heute', en: '04/2024 – present' },
       title: { de: 'Freelancer / IT Consultant', en: 'Freelancer / IT Consultant' },
       company: 'AyT Consulting',
       text: {
@@ -304,16 +304,16 @@ export const career = {
       current: true,
     },
     {
-      period: { de: '2022 – 2024', en: '2022 – 2024' },
-      title: { de: 'Senior Software Engineer', en: 'Senior Software Engineer' },
+      period: { de: '07/2022 – 03/2024', en: '07/2022 – 03/2024' },
+      title: { de: 'Senior Developer', en: 'Senior Developer' },
       company: 'Opitz Consulting GmbH',
       text: {
-        de: 'Entwicklung von Enterprise-Anwendungen für Kunden aus verschiedenen Branchen. Schwerpunkt auf Java/Kotlin und Cloud-Technologien.',
-        en: 'Development of enterprise applications for clients from various industries. Focus on Java/Kotlin and cloud technologies.',
+        de: 'Entwicklung von Enterprise-Anwendungen im Public Sector mit Java, Spring Boot und Angular. Mentor für neue Kolleg:innen.',
+        en: 'Development of enterprise applications in the public sector with Java, Spring Boot and Angular. Mentor for new colleagues.',
       },
     },
     {
-      period: { de: '2016 – 2022', en: '2016 – 2022' },
+      period: { de: '07/2019 – 06/2022', en: '07/2019 – 06/2022' },
       title: { de: 'Software Engineer', en: 'Software Engineer' },
       company: 'MaibornWolff GmbH',
       text: {
@@ -322,18 +322,27 @@ export const career = {
       },
     },
     {
-      period: { de: '2015 – 2016', en: '2015 – 2016' },
-      title: { de: 'Werkstudent / Junior Developer', en: 'Working Student / Junior Developer' },
+      period: { de: '09/2016 – 06/2019', en: '09/2016 – 06/2019' },
+      title: { de: 'Werkstudent – Software Engineer', en: 'Working Student – Software Engineer' },
+      company: 'MaibornWolff GmbH',
+      text: {
+        de: 'Softwareentwicklung parallel zum Studium – zunächst an internen Anwendungen, anschließend im Kundenprojekt.',
+        en: 'Software development alongside my studies – first on internal applications, then in a client project.',
+      },
+    },
+    {
+      period: { de: '09/2015 – 03/2016', en: '09/2015 – 03/2016' },
+      title: { de: 'Werkstudent – Anwendungstester', en: 'Working Student – Application Tester' },
       company: 'Deutsche Telekom AG',
       text: {
-        de: 'Einstieg in die professionelle Softwareentwicklung während des Studiums.',
-        en: 'Entry into professional software development during my studies.',
+        de: 'Funktionstests, Test-Reports und Testpläne für eine Smart-Home-Anwendung in einem internationalen Scrum-Team.',
+        en: 'Functional testing, test reports and test plans for a smart home application in an international Scrum team.',
       },
     },
   ] as { period: L; title: L; company: string; text: L; current?: boolean }[],
   qualificationsTitle: { de: 'Qualifikationen', en: 'Qualifications' },
   qualifications: [
-    { title: { de: 'B.Sc. Informatik', en: 'B.Sc. Computer Science' }, text: { de: 'Bachelor of Science', en: 'Bachelor of Science' } },
+    { title: { de: 'B.Sc. Informatik', en: 'B.Sc. Computer Science' }, text: { de: 'TU Darmstadt', en: 'TU Darmstadt' } },
     { title: { de: 'CPSA-F', en: 'CPSA-F' }, text: { de: 'Certified Professional for Software Architecture', en: 'Certified Professional for Software Architecture' } },
   ] as { title: L; text: L }[],
   languagesTitle: { de: 'Sprachen', en: 'Languages' },
