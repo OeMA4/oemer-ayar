@@ -205,7 +205,7 @@ export const projects = {
     },
     {
       period: { de: '2019 – 2021', en: '2019 – 2021' },
-      title: { de: 'Backend-Entwicklung', en: 'Backend development' },
+      title: { de: 'Fullstack-Entwicklung', en: 'Fullstack development' },
       sector: { de: 'Logistik & Transport', en: 'Logistics & transport' },
       description: {
         de: 'Entwicklung interner Verwaltungssysteme mit Fokus auf Performance und Skalierbarkeit. Einführung strukturierter Dailys und kontinuierliche Prozessverbesserung durch regelmäßige Retrospektiven.',
@@ -216,7 +216,7 @@ export const projects = {
     },
     {
       period: { de: '2016 – 2018', en: '2016 – 2018' },
-      title: { de: 'Fullstack-Entwicklung', en: 'Fullstack development' },
+      title: { de: 'Backend-Entwicklung', en: 'Backend development' },
       sector: { de: 'Logistik & Transport', en: 'Logistics & transport' },
       description: {
         de: 'Entwicklung modularer Softwarekomponenten in einem Enterprise-Umfeld. Etablierung agiler Arbeitsmethoden durch Einführung von Refinements und Moderation von Team-Retrospektiven.',
