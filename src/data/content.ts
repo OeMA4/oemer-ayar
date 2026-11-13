@@ -154,7 +154,7 @@ export const projects = {
   },
   items: [
     {
-      period: { de: '2023 – heute', en: '2023 – present' },
+      period: { de: '2024 – heute', en: '2024 – present' },
       title: { de: 'Enterprise Backend-Entwicklung', en: 'Enterprise backend development' },
       sector: { de: 'Finanzdienstleistung', en: 'Financial services' },
       description: {
