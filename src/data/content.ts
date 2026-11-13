@@ -72,8 +72,8 @@ export const hero = {
   available: { de: 'Offen für neue Projekte', en: 'Open for new projects' },
   eyebrow: { de: 'Freiberuflicher IT Consultant · Frankfurt am Main', en: 'Freelance IT Consultant · Frankfurt am Main' },
   description: {
-    de: 'Ich entwickle skalierbare Backend-Systeme und moderne Web-Applikationen. Mit über <strong>8 Jahren Erfahrung</strong> in der Softwareentwicklung und einem Fokus auf <strong>AI-gestütztes Agentic Coding</strong> helfe ich Unternehmen, komplexe technische Herausforderungen effizienter zu meistern.',
-    en: 'I build scalable backend systems and modern web applications. With over <strong>8 years of experience</strong> in software development and a focus on <strong>AI-powered agentic coding</strong>, I help companies tackle complex technical challenges more efficiently.',
+    de: 'Ich entwickle skalierbare Backend-Systeme und moderne Web-Applikationen. Mit über <strong>10 Jahren Erfahrung</strong> in der Softwareentwicklung und einem Fokus auf <strong>AI-gestütztes Agentic Coding</strong> helfe ich Unternehmen, komplexe technische Herausforderungen effizienter zu meistern.',
+    en: 'I build scalable backend systems and modern web applications. With over <strong>10 years of experience</strong> in software development and a focus on <strong>AI-powered agentic coding</strong>, I help companies tackle complex technical challenges more efficiently.',
   },
   ctaPrimary: { de: 'Projekt anfragen', en: 'Start a conversation' },
   ctaSecondary: { de: 'Projekte ansehen', en: 'View projects' },
@@ -82,7 +82,7 @@ export const hero = {
 };
 
 export const facts: { value: L; label: L }[] = [
-  { value: { de: '8+', en: '8+' }, label: { de: 'Jahre Erfahrung', en: 'Years of experience' } },
+  { value: { de: '10+', en: '10+' }, label: { de: 'Jahre Erfahrung', en: 'Years of experience' } },
   { value: { de: '15+', en: '15+' }, label: { de: 'Projekte', en: 'Projects' } },
   { value: { de: '6+', en: '6+' }, label: { de: 'Unternehmen', en: 'Companies' } },
   { value: { de: 'Frankfurt', en: 'Frankfurt' }, label: { de: 'Remote & Reisebereitschaft', en: 'Remote & willing to travel' } },
@@ -392,8 +392,8 @@ export const about = {
   imageAlt: { de: 'Ömer Ayar in Island', en: 'Ömer Ayar in Iceland' },
   paragraphs: [
     {
-      de: 'Mit über 8 Jahren Erfahrung in der Softwareentwicklung habe ich ein breites Spektrum an Projekten realisiert – von Enterprise-Anwendungen für DAX-Konzerne bis hin zu innovativen Startups.',
-      en: 'With over 8 years of experience in software development, I have delivered a wide range of projects – from enterprise applications for DAX corporations to innovative startups.',
+      de: 'Mit über 10 Jahren Erfahrung in der Softwareentwicklung habe ich ein breites Spektrum an Projekten realisiert – von Enterprise-Anwendungen für DAX-Konzerne bis hin zu innovativen Startups.',
+      en: 'With over 10 years of experience in software development, I have delivered a wide range of projects – from enterprise applications for DAX corporations to innovative startups.',
     },
     {
       de: 'Mein Fokus liegt auf der Entwicklung von <strong>skalierbaren Backend-Systemen</strong> und <strong>modernen Architekturen</strong>. Ich schätze Clean Code, durchdachte Lösungen und agile Arbeitsweisen.',

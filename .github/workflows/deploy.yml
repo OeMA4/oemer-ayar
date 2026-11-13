@@ -4,8 +4,7 @@ name: Build & Deploy
 
 on:
   push:
-    # astro-redesign nur übergangsweise, bis der Branch nach main gemergt ist
-    branches: [main, astro-redesign]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
