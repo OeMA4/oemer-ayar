@@ -17,7 +17,8 @@ export const homePath: Record<Lang, string> = { de: '/', en: '/en/' };
 
 export const site = {
   name: 'Ömer Ayar',
-  role: 'Senior Fullstack Developer & IT Consultant',
+  //   hält „IT Consultant“ beim Zeilenumbruch zusammen
+  role: 'Senior Backend & Fullstack Developer · IT Consultant',
   company: 'AyT Consulting',
   url: 'https://oemer-ayar.de',
   // E-Mail wird im Markup nicht als Klartext ausgegeben (Spam-Schutz).
@@ -27,12 +28,12 @@ export const site = {
   // Auf false setzen, wenn gerade keine Anfragen erwünscht sind.
   available: true,
   title: {
-    de: 'Ömer Ayar | Senior Fullstack Developer & IT Consultant',
-    en: 'Ömer Ayar | Senior Fullstack Developer & IT Consultant',
+    de: 'Ömer Ayar | Senior Backend & Fullstack Developer · IT Consultant',
+    en: 'Ömer Ayar | Senior Backend & Fullstack Developer · IT Consultant',
   } as L,
   description: {
-    de: 'Ömer Ayar – freiberuflicher Senior Fullstack Developer & IT Consultant aus Frankfurt. Spezialisiert auf Java, Kotlin, Spring Boot, TypeScript und Cloud-Architekturen. Offen für neue Projekte.',
-    en: 'Ömer Ayar – freelance Senior Fullstack Developer & IT Consultant based in Frankfurt. Specialised in Java, Kotlin, Spring Boot, TypeScript and cloud architectures. Open for new projects.',
+    de: 'Ömer Ayar – freiberuflicher Senior Backend & Fullstack Developer und IT Consultant aus Frankfurt. Spezialisiert auf Java, Kotlin, Spring Boot, TypeScript und Cloud-Architekturen. Offen für neue Projekte.',
+    en: 'Ömer Ayar – freelance Senior Backend & Fullstack Developer and IT Consultant based in Frankfurt. Specialised in Java, Kotlin, Spring Boot, TypeScript and cloud architectures. Open for new projects.',
   } as L,
 };
 
