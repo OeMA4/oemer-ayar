@@ -83,7 +83,7 @@ export const hero = {
 
 export const facts: { value: L; label: L }[] = [
   { value: { de: '10+', en: '10+' }, label: { de: 'Jahre Erfahrung', en: 'Years of experience' } },
-  { value: { de: '15+', en: '15+' }, label: { de: 'Projekte', en: 'Projects' } },
+  { value: { de: '8+', en: '8+' }, label: { de: 'Projekte', en: 'Projects' } },
   { value: { de: '6+', en: '6+' }, label: { de: 'Unternehmen', en: 'Companies' } },
   { value: { de: 'Frankfurt', en: 'Frankfurt' }, label: { de: 'Remote & Reisebereitschaft', en: 'Remote & willing to travel' } },
 ];
@@ -125,8 +125,8 @@ export const services = {
     {
       title: { de: 'AI & Agentic Coding', en: 'AI & agentic coding' },
       text: {
-        de: 'AI-gestützte Entwicklung mit Werkzeugen wie Claude Code, um komplexe Aufgaben schneller und strukturierter umzusetzen.',
-        en: 'AI-assisted development with tools such as Claude Code to deliver complex work faster and in a more structured way.',
+        de: 'AI-gestützte Entwicklung mit Claude Code und GitHub Copilot – und Beratung von Teams zum effizienten KI-Einsatz: passende Workflows, gezielter Kontext und Token-Optimierung.',
+        en: 'AI-assisted development with Claude Code and GitHub Copilot – and advising teams on using AI efficiently: suitable workflows, focused context and token optimisation.',
       },
     },
   ] as { title: L; text: L }[],
@@ -165,7 +165,22 @@ export const projects = {
         de: 'Senior Backend Developer',
         en: 'Senior Backend Developer',
       },
-      tech: ['Java', 'Kotlin', 'Spring Boot', 'TypeScript', 'AWS', 'GitHub Copilot'],
+      tech: [
+        'Kotlin',
+        'Java 21',
+        'Spring Boot 4',
+        'TypeScript',
+        'Angular 17',
+        'PostgreSQL',
+        'Keycloak',
+        'Microsoft Azure',
+        'Kubernetes',
+        'GitHub Actions',
+        'OpenTelemetry',
+        'Grafana',
+        'Playwright',
+        'GitHub Copilot',
+      ],
       logo: { src: dvagLogo, alt: 'DVAG' },
       status: 'current',
     },
@@ -174,10 +189,10 @@ export const projects = {
       title: { de: 'KFZ-Verwaltungs-WebApp', en: 'Vehicle management web app' },
       sector: { de: 'Persönliches Projekt', en: 'Personal project' },
       description: {
-        de: 'Eine B2C-Web-Applikation zur Verwaltung von Fahrzeugen, Wartungshistorie, Kosten und Dokumenten. Entwickelt mit React und modernen Web-Technologien.',
-        en: 'A B2C web application for managing vehicles, maintenance history, costs and documents. Built with React and modern web technologies.',
+        de: 'Eine B2C-Web-Applikation zur Verwaltung von Fahrzeugen, Wartungshistorie, Kosten und Dokumenten. Entwickelt mit React und modernen Web-Technologien. In Arbeit: KI-Funktionen mit Spring AI – Belege automatisch auslesen und Fragen zur Wartungshistorie beantworten (RAG).',
+        en: 'A B2C web application for managing vehicles, maintenance history, costs and documents. Built with React and modern web technologies. In progress: AI features with Spring AI – automatically extracting data from receipts and answering questions about the maintenance history (RAG).',
       },
-      tech: ['React', 'TypeScript', 'Node.js'],
+      tech: ['React', 'TypeScript', 'Node.js', 'Spring AI'],
       status: 'side',
       link: links.github,
     },
@@ -222,7 +237,7 @@ export const projects = {
         de: 'Unterstützung des Entwicklungsteams als Werkstudent: Umsetzung fachlicher Anforderungen, Unit Tests und Entwicklung eines Excel-Tools, das in die Anwendung integriert wurde.',
         en: 'Supported the development team as a working student: implementing business requirements, unit tests and building an Excel tool that was integrated into the application.',
       },
-      tech: ['Kotlin', 'Spring Boot', 'Apache POI'],
+      tech: ['Kotlin', 'Spring Boot', 'Apache POI', 'Vue.js', 'TypeScript'],
       logo: { src: dbLogo, alt: 'Deutsche Bahn' },
     },
   ] as Project[],
@@ -259,7 +274,7 @@ export const tech = {
   groups: [
     {
       title: { de: 'Backend', en: 'Backend' },
-      skills: [adv('Java'), adv('Kotlin'), adv('Spring Boot'), adv('TypeScript'), adv('Node.js'), adv('JUnit'), adv('Mockito'), basic('Kafka')],
+      skills: [adv('Java 21'), adv('Kotlin'), adv('Spring Boot 4'), adv('TypeScript'), adv('Node.js'), adv('JUnit'), adv('Mockito'), basic('Kafka')],
     },
     {
       title: { de: 'Frontend', en: 'Frontend' },
@@ -267,11 +282,22 @@ export const tech = {
     },
     {
       title: { de: 'Cloud & DevOps', en: 'Cloud & DevOps' },
-      skills: [adv('Azure'), adv('Docker'), adv('Kubernetes'), adv('CI/CD'), basic('AWS')],
+      skills: [
+        adv('Azure'),
+        adv('AWS'),
+        adv('Docker'),
+        adv('Kubernetes'),
+        adv('GitHub Actions'),
+        adv('GitLab CI'),
+        adv('OpenTelemetry'),
+        adv('Prometheus'),
+        adv('Grafana'),
+        adv('Application Insights'),
+      ],
     },
     {
       title: { de: 'Tools & Datenbanken', en: 'Tools & databases' },
-      skills: [adv('PostgreSQL'), adv('MySQL'), adv('MongoDB'), adv('Git'), adv('IntelliJ IDEA'), adv('Maven'), basic('ELK Stack')],
+      skills: [adv('PostgreSQL'), adv('MySQL'), adv('MongoDB'), adv('Keycloak'), adv('Git'), adv('IntelliJ IDEA'), adv('Maven'), basic('ELK Stack')],
     },
     {
       title: { de: 'Methodik', en: 'Methodology' },
@@ -279,7 +305,15 @@ export const tech = {
     },
     {
       title: { de: 'AI & Agentic Coding', en: 'AI & agentic coding' },
-      skills: [adv('Claude Code'), adv('ChatGPT'), adv('GitHub Copilot'), basic('Prompt Engineering')],
+      skills: [
+        adv('Claude Code'),
+        adv('GitHub Copilot'),
+        adv('ChatGPT'),
+        adv({ de: 'KI-Beratung & Workflows', en: 'AI consulting & workflows' }),
+        adv({ de: 'Token-Optimierung', en: 'Token optimisation' }),
+        basic('Prompt Engineering'),
+        basic('Spring AI'),
+      ],
     },
   ] as { title: L; skills: Skill[] }[],
 };
@@ -305,7 +339,10 @@ export const career = {
     },
     {
       period: { de: '07/2022 – 03/2024', en: '07/2022 – 03/2024' },
-      title: { de: 'Senior Developer', en: 'Senior Developer' },
+      title: {
+        de: 'Professional Developer, ab 01/2024 Senior Developer',
+        en: 'Professional Developer, Senior Developer from 01/2024',
+      },
       company: 'Opitz Consulting GmbH',
       text: {
         de: 'Entwicklung von Enterprise-Anwendungen im Public Sector mit Java, Spring Boot und Angular. Mentor für neue Kolleg:innen.',
@@ -347,9 +384,9 @@ export const career = {
   ] as { title: L; text: L }[],
   languagesTitle: { de: 'Sprachen', en: 'Languages' },
   languages: [
-    { name: { de: 'Deutsch', en: 'German' }, level: { de: 'Fließend', en: 'Fluent' } },
+    { name: { de: 'Deutsch', en: 'German' }, level: { de: 'Muttersprache', en: 'Native' } },
+    { name: { de: 'Türkisch', en: 'Turkish' }, level: { de: 'Muttersprache', en: 'Native' } },
     { name: { de: 'Englisch', en: 'English' }, level: { de: 'Fließend', en: 'Fluent' } },
-    { name: { de: 'Türkisch', en: 'Turkish' }, level: { de: 'Fließend', en: 'Fluent' } },
   ] as { name: L; level: L }[],
 };
 
@@ -401,8 +438,8 @@ export const about = {
   imageAlt: { de: 'Ömer Ayar in Island', en: 'Ömer Ayar in Iceland' },
   paragraphs: [
     {
-      de: 'Mit über 10 Jahren Erfahrung in der Softwareentwicklung habe ich ein breites Spektrum an Projekten realisiert – von Enterprise-Anwendungen für DAX-Konzerne bis hin zu innovativen Startups.',
-      en: 'With over 10 years of experience in software development, I have delivered a wide range of projects – from enterprise applications for DAX corporations to innovative startups.',
+      de: 'Mit über 10 Jahren Erfahrung in der Softwareentwicklung habe ich ein breites Spektrum an Projekten realisiert – von Enterprise-Anwendungen für Konzerne wie Deutsche Bahn und MAN bis hin zu Bundesbehörden.',
+      en: 'With over 10 years of experience in software development, I have delivered a wide range of projects – from enterprise applications for corporations such as Deutsche Bahn and MAN to federal authorities.',
     },
     {
       de: 'Mein Fokus liegt auf der Entwicklung von <strong>skalierbaren Backend-Systemen</strong> und <strong>modernen Architekturen</strong>. Ich schätze Clean Code, durchdachte Lösungen und agile Arbeitsweisen.',
