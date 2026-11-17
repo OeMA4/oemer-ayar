@@ -73,7 +73,7 @@ export const hero = {
   available: { de: 'Offen für neue Projekte', en: 'Open for new projects' },
   eyebrow: { de: 'Freiberuflicher IT Consultant · Frankfurt am Main', en: 'Freelance IT Consultant · Frankfurt am Main' },
   description: {
-    de: 'Ich entwickle skalierbare Backend-Systeme und moderne Web-Applikationen. Mit über <strong>10 Jahren Erfahrung</strong> in der Softwareentwicklung und einem Fokus auf <strong>AI-gestütztes Agentic Coding</strong> helfe ich Unternehmen, komplexe technische Herausforderungen effizienter zu meistern.',
+    de: 'Ich entwickle skalierbare Backend-Systeme und moderne Web-Applikationen. Mit über <strong>10 Jahren Erfahrung</strong> in der Softwareentwicklung und einem Fokus auf <strong>KI-gestütztes Agentic Coding</strong> helfe ich Unternehmen, komplexe technische Herausforderungen effizienter zu meistern.',
     en: 'I build scalable backend systems and modern web applications. With over <strong>10 years of experience</strong> in software development and a focus on <strong>AI-powered agentic coding</strong>, I help companies tackle complex technical challenges more efficiently.',
   },
   ctaPrimary: { de: 'Projekt anfragen', en: 'Start a conversation' },
@@ -124,9 +124,9 @@ export const services = {
       },
     },
     {
-      title: { de: 'AI & Agentic Coding', en: 'AI & agentic coding' },
+      title: { de: 'KI & Agentic Coding', en: 'AI & agentic coding' },
       text: {
-        de: 'AI-gestützte Entwicklung mit Claude Code und GitHub Copilot – und Beratung von Teams zum effizienten KI-Einsatz: passende Workflows, gezielter Kontext und Token-Optimierung.',
+        de: 'KI-gestützte Entwicklung mit Claude Code und GitHub Copilot – und Beratung von Teams zum effizienten KI-Einsatz: passende Workflows, gezielter Kontext und Token-Optimierung.',
         en: 'AI-assisted development with Claude Code and GitHub Copilot – and advising teams on using AI efficiently: suitable workflows, focused context and token optimisation.',
       },
     },
@@ -159,8 +159,8 @@ export const projects = {
       title: { de: 'Enterprise Backend-Entwicklung', en: 'Enterprise backend development' },
       sector: { de: 'Finanzdienstleistung', en: 'Financial services' },
       description: {
-        de: 'Backend-Entwicklung in einer Microservice-Architektur. Innerhalb von sechs Monaten nach Projekteinstieg ging das Produkt gemeinsam mit dem Team in Produktion; seitdem Begleitung in Betrieb und Wartung sowie weitere Produkte mitentwickelt und live gebracht. Sprints und Retrospektiven eingeführt und moderiert – für ein einheitliches Vorgehen bei Bugs, Problemlösung und Kommunikation. Seit Anfang 2026 überwiegend KI-gestützte Entwicklung, unter anderem mit GitHub Copilot.',
-        en: 'Backend development in a microservice architecture. Within six months of joining, the product went into production together with the team; since then supporting operations and maintenance and helping build and launch further products. Introduced and facilitated sprints and retrospectives – giving the team a shared approach to bugs, problem solving and communication. Since early 2026, development has been predominantly AI-assisted, including GitHub Copilot.',
+        de: 'Backend-Entwicklung in einer Microservice-Architektur. Innerhalb von sechs Monaten nach Projekteinstieg ging das Produkt gemeinsam mit dem Team in Produktion; seitdem Begleitung in Betrieb und Wartung sowie weitere Produkte mitentwickelt und live gebracht. Sprints und Retrospektiven eingeführt und moderiert – für ein einheitliches Vorgehen bei Bugs, Problemlösung und Kommunikation. Seit Anfang 2026 überwiegend KI-gestützte Entwicklung – zunächst mit Claude Code, inzwischen mit GitHub Copilot.',
+        en: 'Backend development in a microservice architecture. Within six months of joining, the product went into production together with the team; since then supporting operations and maintenance and helping build and launch further products. Introduced and facilitated sprints and retrospectives – giving the team a shared approach to bugs, problem solving and communication. Since early 2026, development has been predominantly AI-assisted – first with Claude Code, now with GitHub Copilot.',
       },
       role: {
         de: 'Senior Backend Developer',
@@ -181,6 +181,7 @@ export const projects = {
         'Grafana',
         'Playwright',
         'GitHub Copilot',
+        'Claude Code',
       ],
       logo: { src: dvagLogo, alt: 'DVAG' },
       status: 'current',
@@ -265,8 +266,8 @@ const basic = (name: string | L): Skill => ({ name, level: 'basic' });
 export const tech = {
   title: { de: 'Tech Stack', en: 'Tech Stack' },
   intro: {
-    de: 'Die Werkzeuge und Technologien, mit denen ich täglich arbeite',
-    en: 'The tools and technologies I work with daily',
+    de: 'Die Werkzeuge und Technologien, mit denen ich in Projekten arbeite',
+    en: 'The tools and technologies I use in my projects',
   },
   legend: {
     advanced: { de: 'Fortgeschritten', en: 'Advanced' },
@@ -305,7 +306,7 @@ export const tech = {
       skills: [adv('Scrum'), adv('Agile'), adv('Code Reviews'), adv({ de: 'Architektur-Design', en: 'Architecture design' })],
     },
     {
-      title: { de: 'AI & Agentic Coding', en: 'AI & agentic coding' },
+      title: { de: 'KI & Agentic Coding', en: 'AI & agentic coding' },
       skills: [
         adv('Claude Code'),
         adv('GitHub Copilot'),
@@ -439,8 +440,8 @@ export const about = {
   imageAlt: { de: 'Ömer Ayar in Island', en: 'Ömer Ayar in Iceland' },
   paragraphs: [
     {
-      de: 'Mit über 10 Jahren Erfahrung in der Softwareentwicklung habe ich ein breites Spektrum an Projekten realisiert – von Enterprise-Anwendungen für Konzerne wie Deutsche Bahn und MAN bis hin zu Bundesbehörden.',
-      en: 'With over 10 years of experience in software development, I have delivered a wide range of projects – from enterprise applications for corporations such as Deutsche Bahn and MAN to federal authorities.',
+      de: 'Mit über 10 Jahren Erfahrung in der Softwareentwicklung habe ich ein breites Spektrum an Projekten realisiert – von Enterprise-Anwendungen für Konzerne wie Deutsche Bahn und MAN über Finanzdienstleister wie die DVAG bis hin zu einer Bundesbehörde.',
+      en: 'With over 10 years of experience in software development, I have delivered a wide range of projects – from enterprise applications for corporations such as Deutsche Bahn and MAN, through financial services providers such as DVAG, to a federal authority.',
     },
     {
       de: 'Mein Fokus liegt auf der Entwicklung von <strong>skalierbaren Backend-Systemen</strong> und <strong>modernen Architekturen</strong>. Ich schätze Clean Code, durchdachte Lösungen und agile Arbeitsweisen.',
