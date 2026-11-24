@@ -98,8 +98,8 @@ export const services = {
     {
       title: { de: 'Backend-Entwicklung', en: 'Backend development' },
       text: {
-        de: 'Skalierbare Services in Microservice-Umgebungen – mit Java, Kotlin und Spring Boot, sauber getestet und mit Blick auf Performance.',
-        en: 'Scalable services in microservice environments – built with Java, Kotlin and Spring Boot, properly tested and designed for performance.',
+        de: 'Skalierbare Services in Microservice-Umgebungen – mit Java, Kotlin und Spring Boot, sauber getestet, sicher nach OWASP-Standards und mit Blick auf Performance.',
+        en: 'Scalable services in microservice environments – built with Java, Kotlin and Spring Boot, properly tested, secured following OWASP standards and designed for performance.',
       },
     },
     {
@@ -298,8 +298,12 @@ export const tech = {
       ],
     },
     {
+      title: { de: 'Security', en: 'Security' },
+      skills: [adv('OWASP Top 10'), adv('Secure Coding'), adv('Keycloak'), adv('OAuth 2.0 / OIDC')],
+    },
+    {
       title: { de: 'Tools & Datenbanken', en: 'Tools & databases' },
-      skills: [adv('PostgreSQL'), adv('MySQL'), adv('MongoDB'), adv('Keycloak'), adv('Git'), adv('IntelliJ IDEA'), adv('Maven'), basic('ELK Stack')],
+      skills: [adv('PostgreSQL'), adv('MySQL'), adv('MongoDB'), adv('Git'), adv('IntelliJ IDEA'), adv('Maven'), basic('ELK Stack')],
     },
     {
       title: { de: 'Methodik', en: 'Methodology' },
