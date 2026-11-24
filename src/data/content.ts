@@ -105,8 +105,8 @@ export const services = {
     {
       title: { de: 'Architektur & Consulting', en: 'Architecture & consulting' },
       text: {
-        de: 'Technische Konzeption, Code Reviews und Qualitätssicherung. Zertifiziert als Certified Professional for Software Architecture (CPSA-F).',
-        en: 'Technical design, code reviews and quality assurance. Certified Professional for Software Architecture (CPSA-F).',
+        de: 'Technische Konzeption, Code Reviews und Qualitätssicherung. Fundiert durch die iSAQB-Schulung Software Architecture – Foundation Level (CPSA-F).',
+        en: 'Technical design, code reviews and quality assurance. Backed by iSAQB training in Software Architecture – Foundation Level (CPSA-F).',
       },
     },
     {
@@ -386,7 +386,7 @@ export const career = {
   qualificationsTitle: { de: 'Qualifikationen', en: 'Qualifications' },
   qualifications: [
     { title: { de: 'B.Sc. Informatik', en: 'B.Sc. Computer Science' }, text: { de: 'TU Darmstadt', en: 'TU Darmstadt' } },
-    { title: { de: 'CPSA-F', en: 'CPSA-F' }, text: { de: 'Certified Professional for Software Architecture', en: 'Certified Professional for Software Architecture' } },
+    { title: { de: 'iSAQB-Schulung CPSA-F', en: 'iSAQB training CPSA-F' }, text: { de: 'Software Architecture – Foundation Level (Schulung)', en: 'Software Architecture – Foundation Level (training)' } },
   ] as { title: L; text: L }[],
   languagesTitle: { de: 'Sprachen', en: 'Languages' },
   languages: [
