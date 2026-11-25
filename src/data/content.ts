@@ -119,8 +119,8 @@ export const services = {
     {
       title: { de: 'Agile Zusammenarbeit', en: 'Agile delivery' },
       text: {
-        de: 'Einführung und Moderation von Dailys, Refinements und Retrospektiven – für Teams, die ihre Prozesse spürbar verbessern wollen.',
-        en: 'Introducing and facilitating dailies, refinements and retrospectives – for teams that want to noticeably improve their processes.',
+        de: 'Moderation von Dailys und Retrospektiven, Einführung von Retrospektiven – für Teams, die ihre Prozesse spürbar verbessern wollen.',
+        en: 'Facilitating dailies and retrospectives, introducing retrospectives – for teams that want to noticeably improve their processes.',
       },
     },
     {
@@ -159,8 +159,8 @@ export const projects = {
       title: { de: 'Enterprise Backend-Entwicklung', en: 'Enterprise backend development' },
       sector: { de: 'Finanzdienstleistung', en: 'Financial services' },
       description: {
-        de: 'Backend-Entwicklung in einer Microservice-Architektur. Innerhalb von sechs Monaten nach Projekteinstieg ging das Produkt gemeinsam mit dem Team in Produktion; seitdem Begleitung in Betrieb und Wartung sowie weitere Produkte mitentwickelt und live gebracht. Sprints und Retrospektiven eingeführt und moderiert – für ein einheitliches Vorgehen bei Bugs, Problemlösung und Kommunikation. Seit Anfang 2026 überwiegend KI-gestützte Entwicklung – zunächst mit Claude Code, inzwischen mit GitHub Copilot.',
-        en: 'Backend development in a microservice architecture. Within six months of joining, the product went into production together with the team; since then supporting operations and maintenance and helping build and launch further products. Introduced and facilitated sprints and retrospectives – giving the team a shared approach to bugs, problem solving and communication. Since early 2026, development has been predominantly AI-assisted – first with Claude Code, now with GitHub Copilot.',
+        de: 'Backend-Entwicklung in einer Microservice-Architektur. Innerhalb von sechs Monaten nach Projekteinstieg ging das Produkt gemeinsam mit dem Team in Produktion; seitdem Begleitung in Betrieb und Wartung sowie weitere Produkte mitentwickelt und live gebracht. Retrospektiven eingeführt und moderiert – für ein einheitliches Vorgehen bei Bugs, Problemlösung und Kommunikation. Seit Anfang 2026 überwiegend KI-gestützte Entwicklung – zunächst mit Claude Code, inzwischen mit GitHub Copilot.',
+        en: 'Backend development in a microservice architecture. Within six months of joining, the product went into production together with the team; since then supporting operations and maintenance and helping build and launch further products. Introduced and facilitated retrospectives – giving the team a shared approach to bugs, problem solving and communication. Since early 2026, development has been predominantly AI-assisted – first with Claude Code, now with GitHub Copilot.',
       },
       role: {
         de: 'Senior Backend Developer',
@@ -174,6 +174,7 @@ export const projects = {
         'Angular 17',
         'PostgreSQL',
         'Keycloak',
+        'Docker',
         'Microsoft Azure',
         'Kubernetes',
         'GitHub Actions',
@@ -206,7 +207,7 @@ export const projects = {
         de: 'Ablösung einer Bestandsanwendung durch eine Neuentwicklung in Java, Spring Boot und Angular – von der fachlichen Anforderung bis zum termingerechten Livegang und der anschließenden Betreuung im Betrieb. Zusätzlich Aufbau einer UI-Library, die in mindestens vier Projekten im Einsatz ist.',
         en: 'Replaced a legacy application with a new build in Java, Spring Boot and Angular – from business requirements to an on-time go-live and subsequent support in operation. Also built a UI library that is used by at least four projects.',
       },
-      tech: ['Java', 'Spring Boot', 'Angular', 'TypeScript', 'MySQL', 'Keycloak', 'Hibernate'],
+      tech: ['Java', 'Spring Boot', 'Angular', 'TypeScript', 'MySQL', 'Docker', 'Keycloak', 'Hibernate'],
       logo: { src: bafaLogo, alt: 'BAFA' },
     },
     {
@@ -217,7 +218,7 @@ export const projects = {
         de: 'Weiterentwicklung einer produktiven Plattform im Team, mit Fokus auf Clean Code und saubere Architektur. Entwicklung mehrerer Microservices in Test Driven Development und Anbindung externer Schnittstellen für Echtzeitdaten – in internationaler Zusammenarbeit.',
         en: 'Further development of a live platform within a team, with a focus on clean code and sound architecture. Built several microservices using test-driven development and integrated external interfaces for real-time data – working with an international team.',
       },
-      tech: ['Kotlin', 'Spring Boot', 'Kafka', 'React', 'TypeScript', 'Docker', 'AWS', 'PostgreSQL'],
+      tech: ['Kotlin', 'Spring Boot', 'Kafka', 'React', 'TypeScript', 'Docker', 'Kubernetes', 'AWS', 'PostgreSQL'],
       logo: { src: manLogo, alt: 'MAN' },
     },
     {
@@ -228,7 +229,7 @@ export const projects = {
         de: 'Großprojekt mit rund 15 Entwickler:innen und einer umfangreichen Microservice-Landschaft, begleitet bis zum Livegang. An fünf bis sieben Microservices in Test Driven Development mitentwickelt und die Oberfläche in Vue.js aufgebaut. Anschließend Übergabe an den Kunden und Einarbeitung interner Entwickler:innen.',
         en: 'Large-scale project with around 15 developers and an extensive microservice landscape, supported through to go-live. Contributed to five to seven microservices using test-driven development and built the user interface in Vue.js. Followed by handover to the client and onboarding of their in-house developers.',
       },
-      tech: ['Kotlin', 'Spring Boot', 'Kafka', 'Vue.js', 'TypeScript', 'Docker', 'AWS'],
+      tech: ['Kotlin', 'Spring Boot', 'Kafka', 'Vue.js', 'TypeScript', 'Docker', 'Kubernetes', 'AWS', 'Prometheus', 'Grafana', 'ELK Stack'],
       logo: { src: dbLogo, alt: 'Deutsche Bahn' },
     },
     {
@@ -303,7 +304,7 @@ export const tech = {
     },
     {
       title: { de: 'Tools & Datenbanken', en: 'Tools & databases' },
-      skills: [adv('PostgreSQL'), adv('MySQL'), adv('MongoDB'), adv('Git'), adv('IntelliJ IDEA'), adv('Maven'), basic('ELK Stack')],
+      skills: [adv('PostgreSQL'), adv('MySQL'), adv('MongoDB'), adv('Git'), adv('IntelliJ IDEA'), adv('Maven'), adv('ELK Stack')],
     },
     {
       title: { de: 'Methodik', en: 'Methodology' },
