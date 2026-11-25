@@ -215,8 +215,8 @@ export const projects = {
       title: { de: 'Fullstack-Entwicklung', en: 'Fullstack development' },
       sector: { de: 'Automotive', en: 'Automotive' },
       description: {
-        de: 'Weiterentwicklung einer produktiven Plattform im Team, mit Fokus auf Clean Code und saubere Architektur. Entwicklung mehrerer Microservices in Test Driven Development und Anbindung externer Schnittstellen für Echtzeitdaten – in internationaler Zusammenarbeit.',
-        en: 'Further development of a live platform within a team, with a focus on clean code and sound architecture. Built several microservices using test-driven development and integrated external interfaces for real-time data – working with an international team.',
+        de: 'Weiterentwicklung einer produktiven Plattform im Team, mit Fokus auf Clean Code, saubere Architektur und Domain Driven Design. Entwicklung mehrerer Microservices in Test Driven Development und Anbindung externer Schnittstellen für Echtzeitdaten – in internationaler Zusammenarbeit.',
+        en: 'Further development of a live platform within a team, with a focus on clean code, sound architecture and domain-driven design. Built several microservices using test-driven development and integrated external interfaces for real-time data – working with an international team.',
       },
       tech: ['Kotlin', 'Spring Boot', 'Kafka', 'React', 'TypeScript', 'Docker', 'Kubernetes', 'AWS', 'PostgreSQL'],
       logo: { src: manLogo, alt: 'MAN' },
@@ -226,8 +226,8 @@ export const projects = {
       title: { de: 'Fullstack-Entwicklung', en: 'Fullstack development' },
       sector: { de: 'Logistik & Transport', en: 'Logistics & transport' },
       description: {
-        de: 'Großprojekt mit rund 15 Entwickler:innen und einer umfangreichen Microservice-Landschaft, begleitet bis zum Livegang. An fünf bis sieben Microservices in Test Driven Development mitentwickelt und die Oberfläche in Vue.js aufgebaut. Anschließend Übergabe an den Kunden und Einarbeitung interner Entwickler:innen.',
-        en: 'Large-scale project with around 15 developers and an extensive microservice landscape, supported through to go-live. Contributed to five to seven microservices using test-driven development and built the user interface in Vue.js. Followed by handover to the client and onboarding of their in-house developers.',
+        de: 'Großprojekt mit rund 15 Entwickler:innen und einer umfangreichen Microservice-Landschaft, begleitet bis zum Livegang. An fünf bis sieben Microservices in Test Driven Development und nach Domain Driven Design mitentwickelt und die Oberfläche in Vue.js aufgebaut. Anschließend Übergabe an den Kunden und Einarbeitung interner Entwickler:innen.',
+        en: 'Large-scale project with around 15 developers and an extensive microservice landscape, supported through to go-live. Contributed to five to seven microservices using test-driven development and domain-driven design and built the user interface in Vue.js. Followed by handover to the client and onboarding of their in-house developers.',
       },
       tech: ['Kotlin', 'Spring Boot', 'Kafka', 'Vue.js', 'TypeScript', 'Docker', 'Kubernetes', 'AWS', 'Prometheus', 'Grafana', 'ELK Stack'],
       logo: { src: dbLogo, alt: 'Deutsche Bahn' },
