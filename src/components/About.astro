@@ -2,6 +2,8 @@
 import { Image } from 'astro:assets';
 import Section from './Section.astro';
 import iceland from '../assets/iceland.jpg';
+import newYork from '../assets/new-york.webp';
+import oman from '../assets/oman.webp';
 import { about, type Lang } from '../data/content';
 
 interface Props {
@@ -22,6 +24,21 @@ const { lang } = Astro.props;
         </ul>
       </div>
     </div>
-    <Image class="about-photo" src={iceland} alt={about.imageAlt[lang]} widths={[400, 800]} sizes="(min-width: 700px) 300px, 70vw" />
+    <div class="about-gallery">
+      <figure>
+        <Image class="about-photo" src={iceland} alt={about.imageAlt[lang]} widths={[400, 800]} sizes="(min-width: 700px) 300px, 70vw" />
+        <figcaption class="mono">{about.travel.iceland[lang]}</figcaption>
+      </figure>
+      <div class="about-travel">
+        <figure>
+          <Image src={newYork} alt={about.travel.newYorkAlt[lang]} widths={[200, 400]} sizes="(min-width: 700px) 135px, 35vw" />
+          <figcaption class="mono">New York</figcaption>
+        </figure>
+        <figure>
+          <Image src={oman} alt={about.travel.omanAlt[lang]} widths={[200, 400]} sizes="(min-width: 700px) 135px, 35vw" />
+          <figcaption class="mono">Oman</figcaption>
+        </figure>
+      </div>
+    </div>
   </div>
 </Section>

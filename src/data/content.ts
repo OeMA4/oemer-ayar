@@ -443,6 +443,11 @@ export const about = {
   title: { de: 'Über mich', en: 'About me' },
   intro: { de: 'Der Mensch hinter dem Profil', en: 'The person behind the profile' },
   imageAlt: { de: 'Ömer Ayar in Island', en: 'Ömer Ayar in Iceland' },
+  travel: {
+    iceland: { de: 'Island', en: 'Iceland' },
+    newYorkAlt: { de: 'Ömer Ayar vor der Skyline von New York', en: 'Ömer Ayar in front of the New York skyline' },
+    omanAlt: { de: 'Ömer Ayar auf einer Sanddüne im Oman', en: 'Ömer Ayar on a sand dune in Oman' },
+  },
   paragraphs: [
     {
       de: 'Mit über 10 Jahren Erfahrung in der Softwareentwicklung habe ich ein breites Spektrum an Projekten realisiert – von Enterprise-Anwendungen für Konzerne wie Deutsche Bahn und MAN über Finanzdienstleister wie die DVAG bis hin zu einer Bundesbehörde.',
@@ -459,6 +464,7 @@ export const about = {
   ] as L[],
   interestsTitle: { de: 'Wenn ich nicht code', en: "When I'm not coding" },
   interests: [
+    { de: 'Padel', en: 'Padel' },
     { de: 'Fußball', en: 'Football' },
     { de: 'Reisen', en: 'Travel' },
     { de: 'Kaffee', en: 'Coffee' },

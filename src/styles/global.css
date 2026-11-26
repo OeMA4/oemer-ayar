@@ -960,6 +960,32 @@ strong {
   border-radius: var(--radius);
 }
 
+.about-gallery figure {
+  margin: 0;
+}
+
+.about-gallery figcaption {
+  margin-top: 0.4rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.about-travel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+  margin-top: 0.9rem;
+}
+
+.about-travel img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
 /* ---------- Kontakt ---------- */
 
 .contact-panel {
@@ -1320,7 +1346,7 @@ strong {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .about-photo {
+  .about-gallery {
     max-width: 260px;
   }
 
