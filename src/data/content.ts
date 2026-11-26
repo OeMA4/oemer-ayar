@@ -73,8 +73,8 @@ export const hero = {
   available: { de: 'Offen für neue Projekte', en: 'Open for new projects' },
   eyebrow: { de: 'Freiberuflicher IT Consultant · Frankfurt am Main', en: 'Freelance IT Consultant · Frankfurt am Main' },
   description: {
-    de: 'Ich entwickle skalierbare Backend-Systeme und moderne Web-Applikationen. Mit über <strong>10 Jahren Erfahrung</strong> in der Softwareentwicklung und einem Fokus auf <strong>KI-gestütztes Agentic Coding</strong> helfe ich Unternehmen, komplexe technische Herausforderungen effizienter zu meistern.',
-    en: 'I build scalable backend systems and modern web applications. With over <strong>10 years of experience</strong> in software development and a focus on <strong>AI-powered agentic coding</strong>, I help companies tackle complex technical challenges more efficiently.',
+    de: 'Ich entwickle skalierbare Backend-Systeme und moderne Web-Applikationen. Mit über <strong>10 Jahren Erfahrung</strong> in der Softwareentwicklung und einem Fokus auf <strong>Software-Architektur</strong>, <strong>KI-gestütztes Agentic Coding</strong> und <strong>KI-Beratung</strong> helfe ich Unternehmen, komplexe technische Herausforderungen effizienter zu meistern.',
+    en: 'I build scalable backend systems and modern web applications. With over <strong>10 years of experience</strong> in software development and a focus on <strong>software architecture</strong>, <strong>AI-powered agentic coding</strong> and <strong>AI consulting</strong>, I help companies tackle complex technical challenges more efficiently.',
   },
   ctaPrimary: { de: 'Projekt anfragen', en: 'Start a conversation' },
   ctaSecondary: { de: 'Projekte ansehen', en: 'View projects' },
@@ -124,7 +124,7 @@ export const services = {
       },
     },
     {
-      title: { de: 'KI & Agentic Coding', en: 'AI & agentic coding' },
+      title: { de: 'KI-Beratung & Agentic Coding', en: 'AI consulting & agentic coding' },
       text: {
         de: 'KI-gestützte Entwicklung mit Claude Code und GitHub Copilot – und Beratung von Teams zum effizienten KI-Einsatz: passende Workflows, gezielter Kontext und Token-Optimierung.',
         en: 'AI-assisted development with Claude Code and GitHub Copilot – and advising teams on using AI efficiently: suitable workflows, focused context and token optimisation.',
@@ -335,7 +335,7 @@ export const career = {
   },
   items: [
     {
-      period: { de: '04/2024 – heute', en: '04/2024 – present' },
+      period: { de: '01/2024 – heute', en: '01/2024 – present' },
       title: { de: 'Freelancer / IT Consultant', en: 'Freelancer / IT Consultant' },
       company: 'AyT Consulting',
       text: {
