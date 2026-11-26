@@ -42,6 +42,7 @@ export const links = {
   xing: 'https://www.xing.com/profile/Oemer_Ayar5/',
   github: 'https://github.com/OeMA4',
   freelance: 'https://www.freelance.de/Freelancer/280602',
+  freelancermap: 'https://www.freelancermap.de/profil/oemer-ayar',
 };
 
 /* ---------- UI-Texte ---------- */
